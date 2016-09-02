@@ -13,8 +13,17 @@
 <meta name="author" content="">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<style>
+body {
+	background-image: url("img/map.jpg");
+}
+</style>
+
 </head>
 <body>
+
+<div style="background-color: #e8d576">
 
 <h1>Delete</h1>
 						
@@ -43,7 +52,7 @@
 							</tr>
 							<% } %>
 						</table>
-
+</div>
 
 </body>
 </html>

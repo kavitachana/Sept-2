@@ -1,4 +1,4 @@
-package zooServlets;
+package foodServlets;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.thezoo.Animal;
-import com.thezoo.DAO;
+import com.food.Food;
+import com.food.DAO;
 
 /**
  * Servlet implementation class deleteFromDB
@@ -40,9 +40,9 @@ public class deleteFromDB extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		int animalId = Integer.parseInt(request.getParameter("id"));
+		int foodId = Integer.parseInt(request.getParameter("food_id"));
 	
-		DAO.deleteFromDB(animalId);
+		DAO.deleteFromDB(foodId);
 		
 	}
 
