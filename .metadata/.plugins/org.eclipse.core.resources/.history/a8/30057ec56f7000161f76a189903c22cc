@@ -1,0 +1,11 @@
+package com.food;
+
+public class Food {
+	
+	private int foodID = 0;
+	private String name = null;
+	private String cuisine = null;
+	
+	
+
+}

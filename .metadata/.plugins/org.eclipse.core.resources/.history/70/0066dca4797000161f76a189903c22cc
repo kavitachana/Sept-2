@@ -1,0 +1,67 @@
+package com.food;
+
+import java.sql.*;
+import java.util.ArrayList;
+
+
+public class DAO {
+
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/?user=root&autoReconnect=true&useSSL=false";
+	static final String USER = "root";
+	static final String PASSWORD = "root";
+
+	static Connection CONN = null;
+	static Statement STMT = null;
+	static PreparedStatement PREP_STMT = null;
+	static ResultSet RES_SET = null;
+
+	public static ArrayList<Food> allFoods = new ArrayList<>();
+
+	public static void connToDB() {
+
+		try {
+			
+			Class.forName(JDBC_DRIVER);
+			
+			System.out.println("Trying to connect to the Database.");
+			CONN = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+			System.out.println("Connected to Database.");
+
+		} catch (SQLException | ClassNotFoundException e) {
+			System.out.println("Failed to connect to the Database.");
+			e.printStackTrace();
+		}
+
+		System.out.println();
+
+	}
+
+	public static void readFromDB() {
+
+		connToDB();
+
+		try {
+			STMT = CONN.createStatement();
+			RES_SET = STMT.executeQuery("SELECT * FROM assignments.zoo_animals;");
+
+			while (RES_SET.next()) {
+
+				Food foodInDB = new Food();
+
+				foodInDB.setFoodID(RES_SET.getInt("food_id"));
+				foodInDB.setName(RES_SET.getString("name"));
+				foodInDB.setCuisine(RES_SET.getString("cuisine"));
+				foodInDB.setNumOfServings(RES_SET.getInt("num_of_servings"));
+				foodInDB.setPrice(RES_SET.getDouble("price"));
+
+				allFoods.add(foodInDB);
+
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}
