@@ -88,6 +88,26 @@ public class DAO {
 		}
 	}
 
-	private static String insertToDB = ("INSERT INTO `assignments`.`food` VALUES 'name' = ?, 'cuisine; = ?, 'num_of_servings' = ?, 'price' = ?");
+	private static String insertToDB = "INSERT INTO `assignments`.`food`" + "(name, cuisine, num_of_servings, price)"
+				+ " VALUES " + "(?, ?, ?, ?)";
+	
+	public static void deleteFromDB(int foodId) {
+
+		
+		connToDB();
+
+		try {
+
+			PREP_STMT = CONN.prepareStatement(deleteFromDB);
+			PREP_STMT.setInt(1, foodId);
+
+			PREP_STMT.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static String deleteFromDB = "DELETE FROM `assignments`.`food` WHERE food_id = ?";
 	
 }

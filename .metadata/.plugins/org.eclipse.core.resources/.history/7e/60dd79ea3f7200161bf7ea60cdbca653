@@ -1,0 +1,4 @@
+body {
+	background-image: img/map.jpg;
+	background-size: 80%;
+}

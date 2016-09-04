@@ -49,6 +49,7 @@ public class addToDB extends HttpServlet {
 		
 		DAO.writeToDB(addToDB);
 		
+		response.sendRedirect("read.jsp");
 	}
 
 }

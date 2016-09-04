@@ -38,7 +38,7 @@ body {
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand"><a href="index.html">World Food
 						Home</a></li>
-				<li><a href="read.jsp">Add an Item</a></li>
+				<li><a href="formadd.html">Add an Item</a></li>
 				<li><a href="#">Delete an Item</a></li>
 				<li><a href="#">Update an Item</a></li>
 			</ul>
@@ -46,7 +46,7 @@ body {
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
 				<div class="row">
-					<div style="background-color: #e8d576" class="col-lg-12">
+					<div style="background-color: #bcd279" class="col-lg-12">
 						<h1>All Menu Items</h1>
 						<br>
 

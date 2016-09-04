@@ -1,0 +1,12 @@
+.add-food {
+
+	background: url("img/map.jpg");
+	background-size: 80%;
+}
+
+.delete-food {
+
+	background: url("img/map.jpg");
+	background-size: 100%;
+	
+}

@@ -1,0 +1,14 @@
+"food_id";"name";"cuisine";"num_of_servings";"price"
+1;"Pizza";"Italian";4;15.0
+2;"Orange Chicken";"Chinese";2;9.5
+3;"Hamburger";"American";1;7.25
+4;"Butter Chicken";"Indian";4;13.75
+5;"Drunken Noodles";"Thai";2;12.5
+6;"Lasagna";"Italian";8;16.5
+7;"Chicken Kabob";"Mediterranean";2;11.25
+8;"Vegetable Samosa";"Indian";2;3.5
+9;"Pork Fried Rice";"Chinese";4;8.75
+10;"Pad Thai";"Thai";2;10.0
+11;"Tacos";"Mexican";2;10.5
+12;"Egg Foo Young";"Chinese";4;9.99
+13;"Banana Pudding";"American";8;15.99
